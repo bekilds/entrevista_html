@@ -1,10 +1,8 @@
-/* ===========================
-   PALETA VERDE PASTEL
-   =========================== */
+
 :root {
-    --primary-color: #CFE9C8;      /* Verde claro pastel */
-    --secondary-color: #A7C89D;    /* Verde oliva suave (header) */
-    --tertiary-color: #7FA26F;     /* Verde musgo (títulos e destaques) */
+    --primary-color: #CFE9C8;    
+    --secondary-color: #A7C89D;  
+    --tertiary-color: #7FA26F;     
 
     --background-gradient: linear-gradient(135deg, #F4F9F1, #D8E7D0);
 
@@ -16,9 +14,7 @@
     --glass-button-shadow: rgba(0, 0, 0, 0.15);
 }
 
-/* ===========================
-   BASE
-   =========================== */
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -34,9 +30,7 @@ body {
     padding: 20px;
 }
 
-/* ===========================
-   HEADER + MENU
-   =========================== */
+
 header {
     background-color: var(--secondary-color);
     color: var(--light-text-color);
@@ -80,9 +74,7 @@ nav a:hover {
     box-shadow: 0 6px 10px var(--glass-button-shadow);
 }
 
-/* ===========================
-   FOTO CENTRALIZADA
-   =========================== */
+
 .foto {
     display: block;
     margin: 40px auto 0 auto;
@@ -91,9 +83,7 @@ nav a:hover {
     box-shadow: 0 5px 15px rgba(0,0,0,0.15);
 }
 
-/* ===========================
-   SEÇÕES
-   =========================== */
+
 main {
     padding: 2rem 0;
 }
@@ -128,9 +118,9 @@ ol {
     margin-left: 20px;
 }
 
-/* ===========================
-   FOOTER
-   =========================== */
+
+
+   
 footer {
     background-color: var(--secondary-color);
     color: var(--light-text-color);
@@ -140,9 +130,7 @@ footer {
     box-shadow: 0 -2px 5px var(--glass-button-shadow);
 }
 
-/* ===========================
-   CONCLUSÃO / CARDS
-   =========================== */
+
 .conclusion-featured {
     text-align: center;
     width: 100%;
@@ -220,3 +208,4 @@ footer {
         max-width: 400px;
     }
 }
+
