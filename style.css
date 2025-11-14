@@ -1,16 +1,24 @@
+/* ===========================
+   PALETA VERDE PASTEL
+   =========================== */
 :root {
-    /* Tons de rosa da paleta que você enviou */
-    --primary-color: #FFC0CB; /* Rosa claro, base */
-    --secondary-color: #FF69B4; /* Rosa médio, para destaques */
-    --tertiary-color: #C71585; /* Rosa mais escuro, para textos ou bordas */
-    --text-color: #333;
-    --light-text-color: #f8f8f8;
-    --background-gradient: linear-gradient(135deg, #FFE4E1, #FFC0CB); /* Gradiente suave */
-    --glass-button-bg: rgba(255, 255, 255, 0.3); /* Fundo do botão vidro */
-    --glass-button-border: rgba(255, 255, 255, 0.6); /* Borda do botão vidro */
-    --glass-button-shadow: rgba(0, 0, 0, 0.1);
+    --primary-color: #CFE9C8;      /* Verde claro pastel */
+    --secondary-color: #A7C89D;    /* Verde oliva suave (header) */
+    --tertiary-color: #7FA26F;     /* Verde musgo (títulos e destaques) */
+
+    --background-gradient: linear-gradient(135deg, #F4F9F1, #D8E7D0);
+
+    --text-color: #2F3B2F;
+    --light-text-color: #ffffff;
+
+    --glass-button-bg: rgba(255, 255, 255, 0.25);
+    --glass-button-border: rgba(255, 255, 255, 0.55);
+    --glass-button-shadow: rgba(0, 0, 0, 0.15);
 }
 
+/* ===========================
+   BASE
+   =========================== */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -26,17 +34,20 @@ body {
     padding: 20px;
 }
 
+/* ===========================
+   HEADER + MENU
+   =========================== */
 header {
     background-color: var(--secondary-color);
     color: var(--light-text-color);
-    padding: 1rem 0;
-    box-shadow: 0 2px 5px var(--glass-button-shadow);
+    padding: 2rem 0;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
 
 header h1 {
-    text-align: center;
     margin-bottom: 1rem;
-    color: var(--light-text-color);
+    font-weight: bold;
 }
 
 nav ul {
@@ -49,35 +60,46 @@ nav ul {
 
 nav a {
     text-decoration: none;
-    color: var(--light-text-color);
     padding: 10px 20px;
     border-radius: 25px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
+    font-weight: bold;
 
-/* Estilo para os botões tipo vidro */
-.glass-button {
     background: var(--glass-button-bg);
     border: 1px solid var(--glass-button-border);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     box-shadow: 0 4px 6px var(--glass-button-shadow);
-    color: var(--text-color); /* Ajuste a cor do texto para melhor contraste */
-    font-weight: bold;
+    color: #2F3B2F;
+
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.glass-button:hover {
-    background: rgba(255, 255, 255, 0.4);
-    transform: translateY(-2px);
-    box-shadow: 0 6px 8px var(--glass-button-shadow);
+nav a:hover {
+    background: rgba(255,255,255,0.4);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 10px var(--glass-button-shadow);
 }
 
+/* ===========================
+   FOTO CENTRALIZADA
+   =========================== */
+.foto {
+    display: block;
+    margin: 40px auto 0 auto;
+    width: 230px;
+    border-radius: 50%;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+/* ===========================
+   SEÇÕES
+   =========================== */
 main {
     padding: 2rem 0;
 }
 
 section {
-    background-color: rgba(255, 255, 255, 0.8); /* Fundo semi-transparente para o conteúdo */
+    background-color: rgba(255, 255, 255, 0.9);
     padding: 30px;
     margin-bottom: 20px;
     border-radius: 10px;
@@ -106,6 +128,9 @@ ol {
     margin-left: 20px;
 }
 
+/* ===========================
+   FOOTER
+   =========================== */
 footer {
     background-color: var(--secondary-color);
     color: var(--light-text-color);
@@ -114,34 +139,19 @@ footer {
     margin-top: 20px;
     box-shadow: 0 -2px 5px var(--glass-button-shadow);
 }
-/* --- Estilos para a Página de Conclusão (Card Layout) --- */
 
+/* ===========================
+   CONCLUSÃO / CARDS
+   =========================== */
 .conclusion-featured {
     text-align: center;
     width: 100%;
     margin-top: 20px;
 }
 
-.featured-icon {
-    display: inline-block;
-    font-size: 1.5rem;
-    color: var(--secondary-color);
-    background-color: var(--background-color);
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    line-height: 50px;
-    text-align: center;
-    margin-bottom: 10px;
-    /* Aplicando o mesmo estilo neumorphic */
-    box-shadow: 8px 8px 15px var(--neumorphic-dark-shadow),
-                -8px -8px 15px var(--neumorphic-light-shadow);
-}
-
 .conclusion-featured h2 {
     font-size: 2rem;
     color: var(--tertiary-color);
-    border-bottom: none; /* Remove a borda padrão que tínhamos */
     margin-bottom: 10px;
 }
 
@@ -149,76 +159,57 @@ footer {
     font-size: 1rem;
     color: var(--text-color);
     max-width: 600px;
-    margin: 0 auto 40px auto; /* Centraliza o parágrafo */
+    margin: 0 auto 40px auto;
 }
 
 .card-container {
     display: flex;
-    justify-content: space-around; /* Espaça os cards */
-    flex-wrap: wrap; /* Permite quebrar linha em telas pequenas */
-    gap: 30px; /* Espaço entre os cards */
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
     margin-top: 30px;
 }
 
 .card {
-    flex: 1; /* Faz os cards terem larguras iguais */
-    min-width: 250px; /* Largura mínima antes de quebrar */
+    flex: 1;
+    min-width: 250px;
     max-width: 300px;
-    background-color: var(--background-color); /* Base neumorphic */
-    border-radius: var(--neumorphic-border-radius);
+    background-color: #ffffff;
+    border-radius: 15px;
     padding: 25px;
-    text-align: left; /* Alinha o texto do card à esquerda */
-    box-shadow: 8px 8px 15px var(--neumorphic-dark-shadow),
-                -8px -8px 15px var(--neumorphic-light-shadow);
+
+    text-align: center;
+
+    box-shadow:
+        6px 6px 15px rgba(200, 210, 200, 0.5),
+        -6px -6px 15px #ffffff;
+
     transition: transform 0.3s ease;
 }
 
 .card:hover {
-    transform: translateY(-5px); /* Efeito de flutuar */
-}
-
-/* Card destacado em rosa (como na sua imagem) */
-.card.card-highlight {
-    background-color: var(--primary-color); /* Rosa claro */
-    /* Sombras ajustadas para o fundo rosa */
-    box-shadow: 8px 8px 15px rgba(200, 150, 160, 0.5), 
-                -8px -8px 15px #ffffff;
-}
-
-.card.card-highlight .card-icon {
-    color: var(--tertiary-color);
-}
-
-.card.card-highlight h3 {
-    color: var(--tertiary-color);
-}
-
-.card.card-highlight p {
-    color: var(--text-color); /* Mantém o texto principal legível */
-}
-
-.card-icon {
-    font-size: 2.5rem; /* Ícone (emoji) maior */
-    margin-bottom: 15px;
-    display: block; /* Garante que o ícone fique na sua própria linha */
-    text-align: center;
+    transform: translateY(-5px);
 }
 
 .card h3 {
     font-size: 1.25rem;
-    color: var(--secondary-color); /* Cor padrão do h3 */
+    color: var(--secondary-color);
     margin-bottom: 10px;
-    text-align: center;
 }
 
 .card p {
     font-size: 0.9rem;
     line-height: 1.5;
-    color: var(--text-color); /* Cor padrão do p */
-    text-align: center;
+    color: var(--text-color);
 }
 
-/* Ajuste para telas menores */
+.card-highlight {
+    background-color: var(--primary-color);
+}
+
+/* ===========================
+   RESPONSIVIDADE
+   =========================== */
 @media (max-width: 768px) {
     .card-container {
         flex-direction: column;
